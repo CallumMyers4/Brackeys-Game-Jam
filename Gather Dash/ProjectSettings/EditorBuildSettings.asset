@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Central Base.unity
+    guid: 3e6138f68bdff8540a975432c49ddd9f
+  - enabled: 1
+    path: Assets/Scenes/Forest Runner.unity
+    guid: c73aeabf275f69c4ab935eb923397842
+  - enabled: 1
+    path: Assets/Scenes/Cave Runner.unity
+    guid: e5e763d7c25b245438cabaa1b93f4517
+  - enabled: 1
+    path: Assets/Scenes/Ocean Runner.unity
+    guid: be3f800fc2fdd944aafeaa64683a6c36
   m_configObjects: {}
