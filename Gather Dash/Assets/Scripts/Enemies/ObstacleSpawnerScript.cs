@@ -7,15 +7,21 @@ public class ObstacleSpawnerScript : MonoBehaviour
     public GameObject obstacle;
     [SerializeField] private MainPlayerScript player;
     public float maxX, minX, maxY, minY;
-    public float timeBetweenSpawn;
-    private float spawnTime;
+    public float minTime, maxTime;
+    private float spawnTime, timeBetweenSpawn;
 
+    void Start()
+    {
+        timeBetweenSpawn = Random.Range(minTime, maxTime);
+        spawnTime = Time.time + timeBetweenSpawn;
+    }
     // Update is called once per frame
     void Update()
     {
         if (Time.time > spawnTime && !player.dead)
         {
             Spawn();
+            timeBetweenSpawn = Random.Range(minTime, maxTime);
             spawnTime = Time.time + timeBetweenSpawn;
         }
     }

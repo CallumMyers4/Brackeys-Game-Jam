@@ -6,7 +6,7 @@ public class PlayerMovementScript : MonoBehaviour
 {
     private Rigidbody2D playerRB;
     private Animator playerAnimator;
-    private bool midair = false;
+    public bool midair = false;
     private bool sliding = false;
     [SerializeField] private int jumpPower;
     [SerializeField] private float slideTime;
@@ -23,7 +23,7 @@ public class PlayerMovementScript : MonoBehaviour
         playerAnimator.SetBool("Midair", midair);
         playerAnimator.SetBool("Sliding", sliding);
 
-        if (Input.GetKeyDown(KeyCode.S) && !midair && !sliding)
+        if (Input.GetKeyDown(KeyCode.S) && !sliding)
         {
             StartCoroutine(Slide());
         }
@@ -33,7 +33,7 @@ public class PlayerMovementScript : MonoBehaviour
     void FixedUpdate()
     {
         //jump
-        if (Input.GetKeyDown(KeyCode.Space) && !midair && !sliding)
+        if (Input.GetKeyDown(KeyCode.Space) && !midair)
         {
             playerRB.AddForce(new Vector2(playerRB.velocity.x, jumpPower));
             midair = true;

@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class MainPlayerScript : MonoBehaviour
 {
     public bool dead;
-    // Start is called before the first frame update
-    void Start()
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            //SceneManager.LoadScene("Forest Runner");
+            Destroy(other.gameObject);
+            //dead = true;
+        }
     }
 }
