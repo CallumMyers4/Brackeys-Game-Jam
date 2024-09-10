@@ -11,9 +11,9 @@ public class MainPlayerScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
-            //SceneManager.LoadScene("Forest Runner");
+            SceneManager.LoadScene("Forest Runner");
             Destroy(other.gameObject);
-            //dead = true;
+            dead = true;
         }
     }
 }

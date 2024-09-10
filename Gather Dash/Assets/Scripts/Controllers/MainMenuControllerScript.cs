@@ -9,7 +9,7 @@ public class MainMenuControllerScript : MonoBehaviour
     [SerializeField] GameObject MainPanel;
     public void Play()
     {
-        SceneManager.LoadScene("Central Base");
+        SceneManager.LoadScene("Forest Runner");
     }
 
     public void Options()
