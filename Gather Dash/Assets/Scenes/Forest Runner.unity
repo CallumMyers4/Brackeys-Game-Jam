@@ -364,8 +364,8 @@ MonoBehaviour:
   player: {fileID: 1403337463}
   maxX: 3.3
   minX: 2
-  maxY: -2.62
-  minY: -2.62
+  maxY: -2.1921
+  minY: -2.1921
   timeBetweenSpawn: 2
 --- !u!1 &648477937
 GameObject:
@@ -393,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 648477937}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.49706036, y: -0.45623288, z: 0.036483478}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
