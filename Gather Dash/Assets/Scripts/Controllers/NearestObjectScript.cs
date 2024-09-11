@@ -6,6 +6,7 @@ using UnityEngine;
 public class NearestObjectScript : MonoBehaviour
 {
     public string objectTag = "Obstacle";
+    public float distanceToSearch;
 
     void Update()
     {
@@ -13,7 +14,7 @@ public class NearestObjectScript : MonoBehaviour
         if (nearestObject != null)
         {
             float distance = Vector3.Distance(transform.position, nearestObject.transform.position);
-            if (distance < 6)
+            if (distance < distanceToSearch)
             {
                 transform.position = new Vector3(transform.position.x + 2, transform.position.y, transform.position.z);
             }
