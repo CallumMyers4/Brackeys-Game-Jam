@@ -5,7 +5,7 @@ using UnityEngine;
 public class OverallGameManagerScript : MonoBehaviour
 {
     public static OverallGameManagerScript globalManager { get; private set; } // Singleton instance
-    public int woodCollected, stoneCollected, soulsCollected;
+    public int woodCollected, stoneCollected, waterCollected;
 
     private void Awake()
     {

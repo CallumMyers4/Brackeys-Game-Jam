@@ -31,7 +31,7 @@ public class GameManagerScript : MonoBehaviour
                 ground.bgSpeed = 0;
 
                 multiplied += runScore / 100;
-                float totalCollected = collectables * multiplied;
+                int totalCollected = (int)(collectables * multiplied);
 
                 gameSpeed = 0;
 
@@ -39,7 +39,20 @@ public class GameManagerScript : MonoBehaviour
 
                 collected.SetText(collectables.ToString());
                 multiplier.SetText(multiplied.ToString("F2"));
-                total.SetText(totalCollected.ToString("F2"));
+                total.SetText(totalCollected.ToString());
+
+                if (SceneManager.GetActiveScene().name == "Forest Runner")
+                {
+                    OverallGameManagerScript.globalManager.woodCollected += totalCollected;
+                }
+                else if (SceneManager.GetActiveScene().name == "Cave Runner")
+                {
+                    OverallGameManagerScript.globalManager.stoneCollected += totalCollected;
+                }
+                else if (SceneManager.GetActiveScene().name == "Ocean Runner")
+                {
+                    OverallGameManagerScript.globalManager.waterCollected += totalCollected;
+                }
             }
             else
             {
