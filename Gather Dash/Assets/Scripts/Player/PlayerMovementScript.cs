@@ -6,6 +6,7 @@ public class PlayerMovementScript : MonoBehaviour
 {
     private Rigidbody2D playerRB;
     private Animator playerAnimator;
+    [SerializeField]
     public bool midair = false;
     private bool sliding = false;
     [SerializeField] private int jumpPower;
@@ -27,17 +28,18 @@ public class PlayerMovementScript : MonoBehaviour
         {
             StartCoroutine(Slide());
         }
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
         //jump
         if (Input.GetKeyDown(KeyCode.Space) && !midair)
         {
             playerRB.AddForce(new Vector2(playerRB.velocity.x, jumpPower));
             midair = true;
         }
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
     }
 
     private void OnCollisionEnter2D(Collision2D other)
